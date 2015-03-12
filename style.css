@@ -12,7 +12,7 @@
 */
 
 /*------------------------------------*\
-    MAIN
+	MAIN
 \*------------------------------------*/
 
 /* global box-sizing */
@@ -36,15 +36,15 @@ body {
 /* clear */
 .clear:before,
 .clear:after {
-    content:' ';
-    display:table;
+	content:' ';
+	display:table;
 }
 
 .clear:after {
-    clear:both;
+	clear:both;
 }
 .clear {
-    *zoom:1;
+	*zoom:1;
 }
 img {
 	max-width:100%;
@@ -70,7 +70,7 @@ input:focus {
 }
 
 /*------------------------------------*\
-    STRUCTURE
+	STRUCTURE
 \*------------------------------------*/
 
 /* wrapper */
@@ -84,6 +84,10 @@ input:focus {
 .header {
 
 }
+	.header img {
+		width: 100%;
+			height: auto;
+	}
 /* logo */
 .logo {
 
@@ -104,14 +108,20 @@ input:focus {
 
 }
 
+.columnWrapper
+{
+	display:flex;
+	justify-content: space-between;
+}
+
 /*------------------------------------*\
-    PAGES
+	PAGES
 \*------------------------------------*/
 
 
 
 /*------------------------------------*\
-    IMAGES
+	IMAGES
 \*------------------------------------*/
 
 
@@ -127,12 +137,12 @@ input:focus {
 		url('fonts/font-name.woff') format('woff'),
 		url('fonts/font-name.ttf') format('truetype'),
 		url('fonts/font-name.svg#font-name') format('svg');
-    font-weight:normal;
-    font-style:normal;
+	font-weight:normal;
+	font-style:normal;
 }
 
 /*------------------------------------*\
-    RESPONSIVE
+	RESPONSIVE
 \*------------------------------------*/
 
 @media only screen and (min-width:320px) {
@@ -159,7 +169,7 @@ input:focus {
 }
 
 /*------------------------------------*\
-    MISC
+	MISC
 \*------------------------------------*/
 
 ::selection {
@@ -179,7 +189,7 @@ input:focus {
 }
 
 /*------------------------------------*\
-    WORDPRESS CORE
+	WORDPRESS CORE
 \*------------------------------------*/
 
 .alignnone {
@@ -253,7 +263,7 @@ a img.aligncenter {
 }
 
 /*------------------------------------*\
-    PRINT
+	PRINT
 \*------------------------------------*/
 
 @media print {

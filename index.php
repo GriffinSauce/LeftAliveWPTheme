@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+	<div class="columnsWrapper">
+
+	<aside>
+		<?php dynamic_sidebar( 'widget-area-1' ); ?>
+	</aside>
+
 	<main role="main">
 		<!-- section -->
 		<section>
@@ -14,6 +20,10 @@
 		<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
+	<aside>
+		<?php dynamic_sidebar( 'widget-area-2' ); ?>
+	</aside>
+
+	</div>
 
 <?php get_footer(); ?>
