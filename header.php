@@ -25,15 +25,15 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<!-- header -->
-		<header class="header clear" role="banner">
-
-			<img id="headerimg" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="Header image alt text" />
-
-		</header>
-		<!-- /header -->
 
 		<!-- wrapper -->
 		<div class="wrapper">
 
+			<!-- header -->
+			<header class="header clear" role="banner">
+				<a href="/">
+					<img id="headerimg" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="Header image alt text" />
+				</a>
+			</header>
+			<!-- /header -->
 

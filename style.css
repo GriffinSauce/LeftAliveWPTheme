@@ -28,6 +28,7 @@
 /* html element 62.5% font-size for REM use */
 html {
 	font-size:62.5%;
+	background-color: #162427;
 }
 body {
 	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -82,12 +83,13 @@ input:focus {
 }
 /* header */
 .header {
-
+	max-width:1280px;
+	margin: auto;
 }
-	.header img {
-		width: 100%;
-			height: auto;
-	}
+.header img {
+	width: 100%;
+	height: auto;
+}
 /* logo */
 .logo {
 
@@ -108,23 +110,56 @@ input:focus {
 
 }
 
-.columnWrapper
+.columnsWrapper
 {
 	display:flex;
-	justify-content: space-between;
 }
+.columnsWrapper aside
+{
+	width:20%;
+	min-height:100%;
+	padding:2rem;
+	background-color: #EAF4F5;
+}
+.columnsWrapper main
+{
+	width:60%;
+	min-height:100%;
+	padding:2rem;
+	background-color:#FFF;
+}
+
 
 /*------------------------------------*\
 	PAGES
 \*------------------------------------*/
 
-
+aside
+{
+	padding:2rem;
+	background-color: #EAF4F5;
+}
+main
+{
+	padding:2rem;
+	background-color:#FFF;
+}
 
 /*------------------------------------*\
 	IMAGES
 \*------------------------------------*/
 
 
+
+/*------------------------------------*\
+	WIDGETS
+\*------------------------------------*/
+
+.tribe-events-list-widget ol
+{
+	margin: 0;
+	padding: 0;
+}
 
 /*------------------------------------*\
 	TYPOGRAPHY
@@ -152,7 +187,14 @@ input:focus {
 
 }
 @media only screen and (min-width:768px) {
-
+	.columnsWrapper
+	{
+		flex-direction: row;
+	}
+	.columnsWrapper > *
+	{
+		width:100%;
+	}
 }
 @media only screen and (min-width:1024px) {
 
