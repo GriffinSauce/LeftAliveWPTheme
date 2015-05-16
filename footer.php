@@ -1,5 +1,5 @@
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+			<footer class="footer grid_12" role="contentinfo">
 
 				<!-- copyright -->
 				<p class="copyright">
@@ -11,6 +11,7 @@
 			</footer>
 			<!-- /footer -->
 
+			</div>
 		</div>
 		<!-- /wrapper -->
 

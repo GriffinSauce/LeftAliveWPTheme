@@ -27,10 +27,10 @@
 
 
 		<!-- wrapper -->
-		<div class="wrapper">
+		<div class="container_12">
 
 			<!-- header -->
-			<header class="header clear" role="banner">
+			<header class="header grid_12 prefix_2 suffix_2" role="banner">
 				<a href="/">
 					<img id="headerimg" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="Header image alt text" />
 				</a>

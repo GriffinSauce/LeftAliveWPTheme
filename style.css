@@ -28,7 +28,7 @@
 /* html element 62.5% font-size for REM use */
 html {
 	font-size:62.5%;
-	background-color: #162427;
+	background-color: #FFF;
 }
 body {
 	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -110,40 +110,12 @@ input:focus {
 
 }
 
-.columnsWrapper
-{
-	display:flex;
-}
-.columnsWrapper aside
-{
-	width:20%;
-	min-height:100%;
-	padding:2rem;
-	background-color: #EAF4F5;
-}
-.columnsWrapper main
-{
-	width:60%;
-	min-height:100%;
-	padding:2rem;
-	background-color:#FFF;
-}
-
 
 /*------------------------------------*\
 	PAGES
 \*------------------------------------*/
 
-aside
-{
-	padding:2rem;
-	background-color: #EAF4F5;
-}
-main
-{
-	padding:2rem;
-	background-color:#FFF;
-}
+
 
 /*------------------------------------*\
 	IMAGES
