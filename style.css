@@ -83,8 +83,7 @@ input:focus {
 }
 /* header */
 .header {
-	max-width:1280px;
-	margin: auto;
+	margin: 5em auto;
 }
 .header img {
 	width: 100%;
