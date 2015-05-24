@@ -177,8 +177,8 @@ if (function_exists('register_sidebar'))
 {
 	// Define Sidebar Widget Area 1
 	register_sidebar(array(
-		'name' => __('Widget Area 1', 'html5blank'),
-		'description' => __('Description for this widget-area...', 'html5blank'),
+		'name' => __('Widget 1: Events', 'html5blank'),
+		'description' => __('3 events max is best', 'html5blank'),
 		'id' => 'widget-area-1',
 		'before_widget' => '<div id="%1$s" class="%2$s">',
 		'after_widget' => '</div>',
@@ -188,9 +188,31 @@ if (function_exists('register_sidebar'))
 
 	// Define Sidebar Widget Area 2
 	register_sidebar(array(
-		'name' => __('Widget Area 2', 'html5blank'),
-		'description' => __('Description for this widget-area...', 'html5blank'),
+		'name' => __('Widget 2: Media', 'html5blank'),
+		'description' => __('Add soundcloud, youtube etc here.', 'html5blank'),
 		'id' => 'widget-area-2',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
+
+	// Define Sidebar Widget Area 3
+	register_sidebar(array(
+		'name' => __('Widget 3: Facebook feed', 'html5blank'),
+		'description' => __('', 'html5blank'),
+		'id' => 'widget-area-3',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
+
+	// Define Sidebar Widget Area 4
+	register_sidebar(array(
+		'name' => __('Widget 4: Gallery', 'html5blank'),
+		'description' => __('Add a photo gallery widget or shortcode here.', 'html5blank'),
+		'id' => 'widget-area-4',
 		'before_widget' => '<div id="%1$s" class="%2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
@@ -348,7 +370,6 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditi
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 

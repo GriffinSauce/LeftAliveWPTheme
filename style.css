@@ -91,7 +91,7 @@ input:focus {
 }
 /* gallery */
 .gallery {
-	height:350px;
+	height:400px;
 	background-color: #333;
 }
 /* content */
@@ -120,15 +120,27 @@ input:focus {
 }
 /* footer */
 .footer {
-
+	margin:50px;
+	text-align: center;
 }
 
 
 /*------------------------------------*\
 	POSTS
 \*------------------------------------*/
+.posts > div{
+	border-top: 3px solid #00869d;
+}
+.posts h1{
+	display:none;
+}
 article{
 	border-top: 3px solid #00869d;
+	margin:0 0 40px 0;
+}
+article h2{
+	font-size:30px;
+	margin:20px 0;
 }
 
 
@@ -141,6 +153,10 @@ article{
 /*------------------------------------*\
 	WIDGETS
 \*------------------------------------*/
+.facebook-feed{
+	padding-top: 15px !important;
+	border-top: 3px solid #00869d;
+}
 
 .tribe-events-list-widget ol,
 .tribe-events-list-widget ol li,

@@ -6,7 +6,7 @@ Template Name: Homepage
 
 <?php get_header(); ?>
 
-<div class="gallery"></div>
+<div class="gallery"><?php dynamic_sidebar( 'widget-area-4' ); ?></div>
 
 <div class="container_12 clearfix">
 
@@ -22,9 +22,7 @@ Template Name: Homepage
 			</div>
 			<div class="grid_5 suffix_1 pic">
 				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-					</a>
+					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
 				<?php endif; ?>
 			</div>
 
@@ -41,11 +39,11 @@ Template Name: Homepage
 
 		<main role="main" class="grid_7 prefix_1 posts">
 			<!-- section -->
-			<?php query_posts(array('post_type' => 'post'));?>
-			<?php get_template_part('loop'); ?>
-			<?php get_template_part('pagination'); ?>
+
+
 			<!-- /section -->
 
+			<?php dynamic_sidebar( 'widget-area-3' ); ?>
 
 		</main>
 
