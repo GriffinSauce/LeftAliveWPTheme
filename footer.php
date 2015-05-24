@@ -1,3 +1,5 @@
+		<div class="container_12">
+
 			<!-- footer -->
 			<footer class="footer grid_12" role="contentinfo">
 
@@ -11,7 +13,6 @@
 			</footer>
 			<!-- /footer -->
 
-			</div>
 		</div>
 		<!-- /wrapper -->
 
