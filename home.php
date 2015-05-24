@@ -41,15 +41,12 @@ Template Name: Homepage
 
 		<main role="main" class="grid_7 prefix_1 posts">
 			<!-- section -->
-			<?php
-			 global $post;
-			 $myposts = get_posts('numberposts=5&category=1');
-			 foreach($myposts as $post) :
-			 ?>
-			 <?php the_title(); ?>
-			 <?php the_content(); ?>
-			 <?php endforeach; ?>
+			<?php query_posts(array('post_type' => 'post'));?>
+			<?php get_template_part('loop'); ?>
+			<?php get_template_part('pagination'); ?>
 			<!-- /section -->
+
+
 		</main>
 
 		<aside class="grid_5 suffix_1 media">

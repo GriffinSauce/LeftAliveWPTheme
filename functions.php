@@ -452,4 +452,85 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 	return '<h2>' . $content . '</h2>';
 }
 
+/*------------------------------------*\
+	Tribe-events custom functions
+\*------------------------------------*/
+
+/**
+ * Return the start date.
+ */
+function tribe_events_event_start_date( $event = null, $before = '', $after = '' ) {
+	if ( is_null( $event ) ) {
+		global $post;
+		$event = $post;
+	}
+
+	if ( is_numeric( $event ) ) {
+		$event = get_post( $event );
+	}
+
+	$schedule                 = '<span class="date-start dtstart">';
+	$microformatStartFormat   = tribe_get_start_date( $event, false, 'Y-m-dTh:i' );
+
+	$settings = array(
+		'show_end_time' => false,
+		'time'          => true,
+	);
+
+	$settings = wp_parse_args( apply_filters( 'tribe_events_event_schedule_details_formatting', $settings ), $settings );
+	if ( ! $settings['time'] ) {
+		$settings['show_end_time'] = false;
+	}
+	extract( $settings );
+
+	$schedule .= '<span class="day">'.tribe_get_start_date( $event, true, 'j').'</span>';
+	$schedule .= '<span class="month">'.tribe_get_start_date( $event, true, 'M').'</span>';
+	$schedule .= '<span class="year">'.tribe_get_start_date( $event, true, 'Y').'</span>';
+	$schedule .= '<span class="value-title" title="' . $microformatStartFormat . '"></span>';
+
+	$schedule .= '</span>';
+
+	$schedule = $before . $schedule . $after;
+
+	return apply_filters( 'tribe_events_event_schedule_details', $schedule );
+}
+
+/**
+ * Return the start time.
+ */
+function tribe_events_event_start_time( $event = null, $before = '', $after = '' ) {
+	if ( is_null( $event ) ) {
+		global $post;
+		$event = $post;
+	}
+
+	if ( is_numeric( $event ) ) {
+		$event = get_post( $event );
+	}
+
+	$schedule                 = '<span class="time-start tstart">';
+	$time_format              = get_option( 'time_format' );
+	$microformatStartFormat   = tribe_get_start_date( $event, false, 'Y-m-dTh:i' );
+
+	$settings = array(
+		'show_end_time' => false,
+		'time'          => true,
+	);
+
+	$settings = wp_parse_args( apply_filters( 'tribe_events_event_schedule_details_formatting', $settings ), $settings );
+	if ( ! $settings['time'] ) {
+		$settings['show_end_time'] = false;
+	}
+	extract( $settings );
+
+	$schedule .= tribe_get_start_date( $event, false, $time_format );
+	$schedule .= '<span class="value-title" title="' . $microformatStartFormat . '"></span>';
+	$schedule .= '</span>';
+
+	$schedule .= '</span>';
+
+	$schedule = $before . $schedule . $after;
+
+	return apply_filters( 'tribe_events_event_schedule_details', $schedule );
+}
 ?>
