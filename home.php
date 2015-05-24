@@ -8,9 +8,9 @@ Template Name: Homepage
 
 <div class="gallery"><?php dynamic_sidebar( 'widget-area-4' ); ?></div>
 
-<div class="container_12 clearfix">
+<div class="container_10 clearfix">
 
-		<aside class="grid_4 prefix_1 gigs">
+		<aside class="grid_3 gigs">
 			<?php dynamic_sidebar( 'widget-area-1' ); ?>
 		</aside>
 
@@ -20,7 +20,7 @@ Template Name: Homepage
 				<h2><?php the_title(); ?></h2>
 				<?php the_content(); // Dynamic Content ?>
 			</div>
-			<div class="grid_5 suffix_1 pic">
+			<div class="grid_4 pic">
 				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
 				<?php endif; ?>
@@ -29,15 +29,15 @@ Template Name: Homepage
 		<?php endwhile; ?>
 
 		<?php else: ?>
-			<div class="grid_9 suffix_1">
+			<div class="grid_8">
 				<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
 			</div>
 		<?php endif; ?>
 
 </div>
-<div class="container_12 clearfix">
+<div class="container_10 clearfix">
 
-		<main role="main" class="grid_7 prefix_1 posts">
+		<main role="main" class="grid_6 posts">
 			<!-- section -->
 
 
@@ -47,7 +47,7 @@ Template Name: Homepage
 
 		</main>
 
-		<aside class="grid_5 suffix_1 media">
+		<aside class="grid_4 media">
 			<?php dynamic_sidebar( 'widget-area-2' ); ?>
 		</aside>
 

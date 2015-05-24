@@ -1,7 +1,7 @@
-		<div class="container_12">
+		<div class="container_10">
 
 			<!-- footer -->
-			<footer class="footer grid_12" role="contentinfo">
+			<footer class="footer grid_10" role="contentinfo">
 
 				<!-- copyright -->
 				<p class="copyright">
