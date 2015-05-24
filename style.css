@@ -91,7 +91,6 @@ input:focus {
 }
 /* gallery */
 .gallery {
-	height:400px;
 	background-color: #333;
 }
 /* content */
@@ -243,28 +242,52 @@ article h2{
 	RESPONSIVE
 \*------------------------------------*/
 
-@media only screen and (min-width:320px) {
+@media only screen and (max-width:1000px) { 
+	.container_10 {
+        width:100% !important;
+    }
+    .container_10 .grid_1,
+    .container_10 .grid_2,
+    .container_10 .grid_3,
+    .container_10 .grid_4,
+    .container_10 .grid_5,
+    .container_10 .grid_6,
+    .container_10 .grid_7,
+    .container_10 .grid_8,
+    .container_10 .grid_9,
+    .container_10 .grid_10 {
+        display: block;
+        float: none;
+        width: 100% !important;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 5px;
+    }
+    .container_10 .prefix_1,
+    .container_10 .prefix_2,
+    .container_10 .prefix_3,
+    .container_10 .prefix_4,
+    .container_10 .prefix_5,
+    .container_10 .prefix_6,
+    .container_10 .prefix_7,
+    .container_10 .prefix_8,
+    .container_10 .prefix_9 {
+        padding-left: 50px !important;
+    }
+    .container_10 .suffix_1,
+    .container_10 .suffix_2,
+    .container_10 .suffix_3,
+    .container_10 .suffix_4,
+    .container_10 .suffix_5,
+    .container_10 .suffix_6,
+    .container_10 .suffix_7,
+    .container_10 .suffix_8,
+    .container_10 .suffix_9 {
+        padding-right: 50px !important;
+    }
 
 }
-@media only screen and (min-width:480px) {
 
-}
-@media only screen and (min-width:768px) {
-
-}
-@media only screen and (min-width:1024px) {
-
-}
-@media only screen and (min-width:1140px) {
-
-}
-@media only screen and (min-width:1280px) {
-
-}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-	   only screen and (min-resolution:144dpi) {
-
-}
 
 /*------------------------------------*\
 	MISC
