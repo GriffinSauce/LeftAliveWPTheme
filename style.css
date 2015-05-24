@@ -242,7 +242,23 @@ article h2{
 	RESPONSIVE
 \*------------------------------------*/
 
-@media only screen and (max-width:1000px) { 
+@media only screen and (max-width:1000px) {
+    .header h1{
+        font-size: 2em;
+    }
+    .container_10 .desc.grid_3{
+        padding: 0 30px;
+    }
+    .container_10 .pic.grid_4{
+        padding: 0 30px;
+        margin:0;
+        text-align: right;
+    }
+    .container_10 .pic.grid_4 img{
+    }
+    .posts{
+        display: none !important;
+    }
 	.container_10 {
         width:100% !important;
     }

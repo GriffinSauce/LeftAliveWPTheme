@@ -47,7 +47,7 @@ Template Name: Homepage
 
 		</main>
 
-		<aside class="grid_4 media">
+        <aside class="grid_4 media">
 			<?php dynamic_sidebar( 'widget-area-2' ); ?>
 		</aside>
 
