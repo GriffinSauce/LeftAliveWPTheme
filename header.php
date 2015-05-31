@@ -12,6 +12,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Left Alive" />
+		<meta property="og:url" content="http://www.leftalive.nl/" />
+		<meta property="og:image" content="http://www.leftalive.nl/wp-content/uploads/2015/05/bandimage1.png" />
+		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+		<meta property="og:site_name" content="Left Alive" />
+
 		<!-- Ze Gewgle Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 

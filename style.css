@@ -88,7 +88,7 @@ input:focus {
 	text-align: center;
 	margin:1em 0 0 0;
 	font-weight: 300;
-	font-size: 50px;
+	font-size: 42px;
 	color:#00869d;
 }
 /* gallery */
@@ -107,13 +107,26 @@ input:focus {
 }
 .desc a{
 	display:inline-block;
-	text-align: center;
-	width:32%;
+	width:30%;
+	margin-right: 2%;
+	padding:4px 5px 5px 5px;
+	border-radius: 3px;
+	background-color: #F0F0F0;
+	border:1px solid #F0F0F0;
+	transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
 }
-.desc a img,
-.desc a span{
-	display:block;
-	margin: auto;
+	.desc a img{
+		margin-right: 0.1em;
+		vertical-align: middle;
+	}
+	.desc a span{
+		font-size: 0.8em;
+		vertical-align: middle;
+	}
+.desc a:hover{
+	color:#00869d;
+	background-color:#FFF;
+	border:1px solid #c8dce0;
 }
 .pic {
 	margin:70px 0 0 0;
@@ -167,7 +180,11 @@ article h2{
 .tribe-events-event-image img{
 	max-height: 350px;
 }
-
+.metaslider .caption{
+	font-size: 10px;
+	color: #00869D;
+	font-style: italic;
+}
 
 /*------------------------------------*\
 	WIDGETS
@@ -194,6 +211,7 @@ article h2{
 	position: relative;
 	margin: 0 0 5px 0;
 	background-color:#2c4e54;
+	transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
 }
 .tribe-events-list-widget ol li a
 {
@@ -256,11 +274,11 @@ article h2{
 
 .tribe-events-list-widget ol li:hover
 {
-	background-color:#32585f;
+	background-color:#2a464b;
 }
 .tribe-events-list-widget ol li:hover .date-start
 {
-	background-color:#0890a7;
+	background-color:#007e93;
 }
 /*------------------------------------*\
 	TYPOGRAPHY
