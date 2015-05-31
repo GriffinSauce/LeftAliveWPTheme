@@ -1,11 +1,11 @@
 /*
-	Theme Name: HTML5 Blank
-	Theme URI: http://html5blank.com
-	Description: HTML5 Blank WordPress Theme
-	Version: 1.4.3
-	Author: Todd Motto (@toddmotto)
-	Author URI: http://toddmotto.com
-	Tags: Blank, HTML5, CSS3
+	Theme Name: Left Alive
+	Theme URI: https://github.com/GriffinSauce
+	Description: Left Alive WP Theme
+	Version: 1.0.0
+	Author: Joris Griffioen
+	Author URI: https://github.com/GriffinSauce
+	Tags: HTML5, CSS3, Band, Music
 
 	License: MIT
 	License URI: http://opensource.org/licenses/mit-license.php
@@ -243,64 +243,64 @@ article h2{
 \*------------------------------------*/
 
 @media only screen and (max-width:1000px) {
-    .header h1{
-        font-size: 2em;
-    }
-    .container_10 .desc.grid_3{
-        padding: 0 30px;
-    }
-    .container_10 .pic.grid_4{
-        padding: 0 30px;
-        margin:0;
-        text-align: right;
-    }
-    .container_10 .pic.grid_4 img{
-    }
-    .posts{
-        display: none !important;
-    }
+	.header h1{
+		font-size: 2em;
+	}
+	.container_10 .desc.grid_3{
+		padding: 0 30px;
+	}
+	.container_10 .pic.grid_4{
+		padding: 0 30px;
+		margin:0;
+		text-align: right;
+	}
+	.container_10 .pic.grid_4 img{
+	}
+	.posts{
+		display: none !important;
+	}
 	.container_10 {
-        width:100% !important;
-    }
-    .container_10 .grid_1,
-    .container_10 .grid_2,
-    .container_10 .grid_3,
-    .container_10 .grid_4,
-    .container_10 .grid_5,
-    .container_10 .grid_6,
-    .container_10 .grid_7,
-    .container_10 .grid_8,
-    .container_10 .grid_9,
-    .container_10 .grid_10 {
-        display: block;
-        float: none;
-        width: 100% !important;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 5px;
-    }
-    .container_10 .prefix_1,
-    .container_10 .prefix_2,
-    .container_10 .prefix_3,
-    .container_10 .prefix_4,
-    .container_10 .prefix_5,
-    .container_10 .prefix_6,
-    .container_10 .prefix_7,
-    .container_10 .prefix_8,
-    .container_10 .prefix_9 {
-        padding-left: 50px !important;
-    }
-    .container_10 .suffix_1,
-    .container_10 .suffix_2,
-    .container_10 .suffix_3,
-    .container_10 .suffix_4,
-    .container_10 .suffix_5,
-    .container_10 .suffix_6,
-    .container_10 .suffix_7,
-    .container_10 .suffix_8,
-    .container_10 .suffix_9 {
-        padding-right: 50px !important;
-    }
+		width:100% !important;
+	}
+	.container_10 .grid_1,
+	.container_10 .grid_2,
+	.container_10 .grid_3,
+	.container_10 .grid_4,
+	.container_10 .grid_5,
+	.container_10 .grid_6,
+	.container_10 .grid_7,
+	.container_10 .grid_8,
+	.container_10 .grid_9,
+	.container_10 .grid_10 {
+		display: block;
+		float: none;
+		width: 100% !important;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 5px;
+	}
+	.container_10 .prefix_1,
+	.container_10 .prefix_2,
+	.container_10 .prefix_3,
+	.container_10 .prefix_4,
+	.container_10 .prefix_5,
+	.container_10 .prefix_6,
+	.container_10 .prefix_7,
+	.container_10 .prefix_8,
+	.container_10 .prefix_9 {
+		padding-left: 50px !important;
+	}
+	.container_10 .suffix_1,
+	.container_10 .suffix_2,
+	.container_10 .suffix_3,
+	.container_10 .suffix_4,
+	.container_10 .suffix_5,
+	.container_10 .suffix_6,
+	.container_10 .suffix_7,
+	.container_10 .suffix_8,
+	.container_10 .suffix_9 {
+		padding-right: 50px !important;
+	}
 
 }
 
