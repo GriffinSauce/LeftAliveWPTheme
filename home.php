@@ -19,6 +19,18 @@ Template Name: Homepage
 			<div class="grid_3 desc">
 				<h2><?php the_title(); ?></h2>
 				<?php the_content(); // Dynamic Content ?>
+				<a href="https://www.facebook.com/leftaliveband" target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-facebook.png" />
+					<span><?php _e( 'Like', 'html5blank' ); ?></span>
+				</a>
+				<a href="https://soundcloud.com/leftalive" target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-soundcloud.png" />
+					<span><?php _e( 'Listen', 'html5blank' ); ?></span>
+				</a>
+				<a href="https://www.youtube.com/c/LeftAliveNLband" target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-youtube.png" />
+					<span><?php _e( 'Watch', 'html5blank' ); ?></span>
+				</a>
 			</div>
 			<div class="grid_4 pic">
 				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
@@ -47,7 +59,7 @@ Template Name: Homepage
 
 		</main>
 
-        <aside class="grid_4 media">
+		<aside class="grid_4 media">
 			<?php dynamic_sidebar( 'widget-area-2' ); ?>
 		</aside>
 

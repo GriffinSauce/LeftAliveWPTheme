@@ -105,6 +105,16 @@ input:focus {
 .desc h2{
 	margin-top:0;
 }
+.desc a{
+	display:inline-block;
+	text-align: center;
+	width:32%;
+}
+.desc a img,
+.desc a span{
+	display:block;
+	margin: auto;
+}
 .pic {
 	margin:70px 0 0 0;
 	padding-top:2px;
@@ -163,15 +173,25 @@ article h2{
 .tribe-events-list-widget ol li,
 .tribe-events-list-widget ol li a
 {
-	margin: 0 0 5px 0;
 	padding: 0;
 	color:#FFF;
+}
+.tribe-events-list-widget ol
+{
+	margin:0;
 }
 .tribe-events-list-widget ol li
 {
 	display:block;
 	position: relative;
+	margin: 0 0 5px 0;
 	background-color:#2c4e54;
+}
+.tribe-events-list-widget ol li a
+{
+	width: 100%;
+	display: block;
+	overflow: hidden;
 }
 .tribe-events-list-widget ol .date-start
 {
@@ -224,6 +244,15 @@ article h2{
 }
 .tribe-events-widget-link{
 	margin:0;
+}
+
+.tribe-events-list-widget ol li:hover
+{
+	background-color:#32585f;
+}
+.tribe-events-list-widget ol li:hover .date-start
+{
+	background-color:#0890a7;
 }
 /*------------------------------------*\
 	TYPOGRAPHY

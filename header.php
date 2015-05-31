@@ -35,7 +35,7 @@
 			<!-- header -->
 			<header class="header grid_10 prefix_1 suffix_1" role="banner">
 				<a href="/">
-					<img id="headerimg" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="Header image alt text" />
+					<img id="headerimg" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="Left Alive" />
 					<h1>PUNKROCK FROM THE HEART</h1>
 				</a>
 			</header>
