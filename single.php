@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<div class="container_12 clearfix">
+	<div class="container_10 clearfix">
 
-		<main role="main" class="grid_7 prefix_1">
+		<main role="main" class="grid_7">
 			<!-- section -->
 			<section>
 
@@ -57,9 +57,8 @@
 			<!-- /section -->
 		</main>
 
-		<aside class="grid_5 suffix_1">
+		<aside class="grid_3">
 			<?php dynamic_sidebar( 'widget-area-1' ); ?>
-			<?php dynamic_sidebar( 'widget-area-2' ); ?>
 		</aside>
 
 	</div>

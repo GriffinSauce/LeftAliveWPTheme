@@ -1,45 +1,46 @@
 <?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+	<div class="container_10 clearfix">
 
-			<h1><?php the_title(); ?></h1>
+		<main role="main" class="grid_7">
+			<!-- section -->
+			<section>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<h1><?php the_title(); ?></h1>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-				<?php the_content(); ?>
+				<!-- article -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+					<?php the_content(); ?>
 
-				<br class="clear">
+				</article>
+				<!-- /article -->
 
-				<?php edit_post_link(); ?>
+			<?php endwhile; ?>
 
-			</article>
-			<!-- /article -->
+			<?php else: ?>
 
-		<?php endwhile; ?>
+				<!-- article -->
+				<article>
 
-		<?php else: ?>
+					<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-			<!-- article -->
-			<article>
+				</article>
+				<!-- /article -->
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+			<?php endif; ?>
 
-			</article>
-			<!-- /article -->
+			</section>
+			<!-- /section -->
+		</main>
 
-		<?php endif; ?>
+		<aside class="grid_3">
+			<?php dynamic_sidebar( 'widget-area-1' ); ?>
+			<?php dynamic_sidebar( 'widget-area-2' ); ?>
+		</aside>
 
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+	</div>
 
 <?php get_footer(); ?>
