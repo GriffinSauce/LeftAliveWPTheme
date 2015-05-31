@@ -10,13 +10,13 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta name="description" content="We Are Left Alive! Punkrock from The Hague with a positive look at a negative world and lots of drive and energy. Come check us out at one of our gigs!">
 
 		<!-- Open Graph data -->
-		<meta property="og:title" content="Left Alive" />
+		<meta property="og:title" content="Left Alive - Punkrock from the heart" />
 		<meta property="og:url" content="http://www.leftalive.nl/" />
 		<meta property="og:image" content="http://www.leftalive.nl/wp-content/uploads/2015/05/bandimage1.png" />
-		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+		<meta property="og:description" content="We Are Left Alive! Punkrock from The Hague with a positive look at a negative world and lots of drive and energy. Come check us out at one of our gigs!" />
 		<meta property="og:site_name" content="Left Alive" />
 
 		<!-- Ze Gewgle Fonts -->
