@@ -1,4 +1,4 @@
-		<div class="container_10">
+		<div class="container_10 clearfix">
 
 			<!-- footer -->
 			<footer class="footer grid_10" role="contentinfo">

@@ -78,7 +78,7 @@ input:focus {
 
 /* header */
 .header {
-	margin: 100px auto;
+	margin: 70px auto;
 }
 .header img {
 	width: 100%;
@@ -86,7 +86,7 @@ input:focus {
 }
 .header h1{
 	text-align: center;
-	margin:1em 0 0 0;
+	margin:0.8em 0 0 0;
 	font-weight: 300;
 	font-size: 42px;
 	color:#00869d;
@@ -94,13 +94,11 @@ input:focus {
 /* gallery */
 .gallery {
 	background-color: #333;
+	box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1) inset;
 }
 /* content */
-.gigs {
-	margin:70px 0 0 0;
-}
-.desc {
-	margin:70px 0 0 0;
+.info {
+	padding: 70px 0 0 0;
 }
 .desc h2{
 	margin-top:0;
@@ -129,14 +127,18 @@ input:focus {
 	border:1px solid #c8dce0;
 }
 .pic {
-	margin:70px 0 0 0;
 	padding-top:2px;
 }
-.posts{
-	margin:70px 0 0 0;
+.content-wrapper {
+	padding-top: 50px;
+	background-image: url("img/content_background.png");
+    background-repeat: repeat-y;
+    background-color: #f3f3f3;
+    background-position-x: 50%;
+	box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.04) inset;
 }
-.media{
-	margin:70px 0 0 0;
+.posts{
+	background-color: #FFF;
 }
 /* sidebar */
 .sidebar {
@@ -146,12 +148,14 @@ input:focus {
 .footer {
 	margin:50px;
 	text-align: center;
+	font-size: 0.8em;
+    font-style: italic;
 }
 
 
 /* TEMP UNTIL SOUNDCLOUD */
 .media{
-	border-top: 3px solid #F50;
+	/*border-top: 3px solid #F50;*/
 }
 
 
@@ -159,7 +163,12 @@ input:focus {
 	POSTS
 \*------------------------------------*/
 .posts > div{
-	border-top: 3px solid #00869d;
+    border-left: 1px solid #E2E2E2;
+    border-right: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
+    border-top: 3px solid #00869d;
+    padding: 0 15px;
+	background-color: #FFF;
 }
 .posts h1{
 	display:none;
@@ -252,7 +261,7 @@ article h2{
 .tribe-events-list-widget ol .description
 {
 	display:inline-block;
-	margin:10px;
+	margin:10px 0 10px 10px;
 }
 .tribe-events-list-widget ol .description h4
 {
@@ -280,6 +289,42 @@ article h2{
 {
 	background-color:#007e93;
 }
+
+.easy-opt-in-widget {
+    margin-top: 15px;
+}
+
+.easy-opt-in-widget #fca_eoi_form_177 div.fca_eoi_layout_1.fca_eoi_layout_widget, 
+.easy-opt-in-widget #fca_eoi_form_177 form.fca_eoi_layout_1.fca_eoi_layout_widget {
+    max-width: 500px;
+    border-color: #E2E2E2 !important;
+}
+
+.easy-opt-in-widget #fca_eoi_form_177 div.fca_eoi_layout_1 div.fca_eoi_layout_submit_button_wrapper input,
+.easy-opt-in-widget #fca_eoi_form_177 form.fca_eoi_layout_1 div.fca_eoi_layout_submit_button_wrapper input,
+.easy-opt-in-widget #fca_eoi_form_177 div.fca_eoi_layout_1 div.fca_eoi_layout_submit_button_wrapper input:hover,
+.easy-opt-in-widget #fca_eoi_form_177 form.fca_eoi_layout_1 div.fca_eoi_layout_submit_button_wrapper input:hover {
+    background: #00869D;
+    border-radius: 2px;
+    border: none !important;
+    box-shadow: none
+}
+
+.easy-opt-in-widget  #fca_eoi_form_177 .fca_eoi_layout_1.fca_eoi_layout_widget div.fca_eoi_layout_headline_copy_wrapper div {
+	font-family: 'Lato', sans-serif;
+}
+
+.widget_text#text-6 {
+	background-color: #FFF;
+    padding: 15px;
+    margin-top: 15px;
+	border-color: #E2E2E2;
+	text-align: center;
+}
+.widget_text#text-6 h3 {
+	margin-top: 0;
+}
+
 /*------------------------------------*\
 	TYPOGRAPHY
 \*------------------------------------*/
@@ -299,7 +344,11 @@ article h2{
 	RESPONSIVE
 \*------------------------------------*/
 
+
 @media only screen and (max-width:1000px) {
+	.header {
+		margin: 40px auto
+	}
 	.header h1{
 		font-size: 2em;
 	}
@@ -382,6 +431,17 @@ article h2{
 
 }
 
+@media only screen and (max-width:768px) {
+	.header {
+		margin: 20px auto
+	}
+	.header h1 {
+		font-size: 1em;
+	}
+	.info {
+		padding-top: 5px;
+	}
+}
 
 /*------------------------------------*\
 	MISC

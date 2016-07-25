@@ -8,7 +8,7 @@ Template Name: Homepage
 
 <div class="gallery"><?php dynamic_sidebar( 'widget-area-4' ); ?></div>
 
-<div class="container_10 clearfix">
+<div class="container_10 clearfix info">
 
 		<aside class="grid_3 gigs">
 			<?php dynamic_sidebar( 'widget-area-1' ); ?>
@@ -27,7 +27,7 @@ Template Name: Homepage
 					<img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-soundcloud.png" />
 					<span><?php _e( 'Listen', 'html5blank' ); ?></span>
 				</a>
-				<a class="btn" href="https://www.youtube.com/c/LeftAliveNLband" target="_blank">
+				<a class="btn" href="https://www.youtube.com/leftalive" target="_blank">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/icons/icon-youtube.png" />
 					<span><?php _e( 'Watch', 'html5blank' ); ?></span>
 				</a>
@@ -47,22 +47,24 @@ Template Name: Homepage
 		<?php endif; ?>
 
 </div>
-<div class="container_10 clearfix">
+<div class="content-wrapper">
+	<div class="container_10 clearfix">
 
-		<main role="main" class="grid_6 posts">
-			<!-- section -->
+			<main role="main" class="grid_6 posts">
+				<!-- section -->
 
 
-			<!-- /section -->
+				<!-- /section -->
 
-			<?php dynamic_sidebar( 'widget-area-3' ); ?>
+				<?php dynamic_sidebar( 'widget-area-3' ); ?>
 
-		</main>
+			</main>
 
-		<aside class="grid_4 media">
-			<?php dynamic_sidebar( 'widget-area-2' ); ?>
-		</aside>
+			<aside class="grid_4 media">
+				<?php dynamic_sidebar( 'widget-area-2' ); ?>
+			</aside>
 
+	</div>
+	<?php get_footer(); ?>
 </div>
 
-<?php get_footer(); ?>
