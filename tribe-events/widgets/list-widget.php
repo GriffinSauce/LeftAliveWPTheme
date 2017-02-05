@@ -79,6 +79,8 @@ if ( $posts ) : ?>
 <?php
 // No events were found.
 else : ?>
-	<p><?php printf( __( 'There are no upcoming %s at this time.', 'tribe-events-calendar' ), strtolower( $events_label_plural ) ); ?></p>
+	<p>No shows planned, book us!</p>
+	<p>Phone: <a href="tel:0031630336052">06-30336052</a></p>
+	<p>Email: <a href="mailto:mail@leftalive.nl">mail@leftalive.nl</a></p>
 <?php
 endif;

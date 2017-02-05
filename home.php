@@ -25,7 +25,7 @@ Template Name: Homepage
 					</div>
 				</section>
 
-				<section class="links">
+				<section class="links" id="music">
 					<div class="row">
 						<div class="col-sm-6 column">
 	                        <a class="button button-spotify" href="https://open.spotify.com/artist/128KZvfmYDa6R9uuma8u1A" target="_blank">
@@ -39,7 +39,7 @@ Template Name: Homepage
 		                            </a>
 		                        </div>
 								<div class="col-xs-6">
-									<a href="#" target="_blank">
+									<a href="#">
 		                            	<img src="<?php echo get_template_directory_uri(); ?>/img/leaveit-comingsoon.jpg">
 		                            </a>
 		                        </div>
@@ -94,10 +94,11 @@ Template Name: Homepage
 
 				<!-- Insta feed -->
 				<div class="instagram-feed">
+					<h4>Follow us on instagram: <a href="https://www.instagram.com/leftaliveband/" target="_blank">@leftaliveband</a></h4>
+
 					<!-- LightWidget WIDGET -->
 					<script src="//lightwidget.com/widgets/lightwidget.js"></script>
 					<iframe src="//lightwidget.com/widgets/ae07819c0793503091da7e9e9da2a715.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-					<p>Follow us on instagram: <a href="https://www.instagram.com/leftaliveband/" target="_blank">@leftaliveband</a></p>
 				</div>
 			</div>
 

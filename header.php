@@ -54,20 +54,38 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+		<div class="navigation-wrapper">
+			<div class="container">
+				<nav class="col-xs-12 col-sm-10 col-sm-push-1">
+					<ul class="navigation">
+						<li>
+							<a href="<?php echo site_url('/#') ?>">Home</a>
+						</li>
+						<li>
+							<a href="<?php echo site_url('/#music') ?>">Music</a>
+						</li>
+						<li>
+							<a href="<?php echo site_url('/events') ?>">Shows</a>
+						</li>
+						<li>
+							<a href="<?php echo site_url('/merch') ?>">Merch</a>
+						</li>
+						<li>
+							<a href="https://facebook.com/leftaliveband" target="_blank">Facebook</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 
-		<!-- wrapper -->
 		<div class="header-wrapper">
 			<div class="container">
-
-				<!-- header -->
 				<header class="header col-xs-12" role="banner">
 					<a href="/">
 						<img id="headerimg" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="Left Alive" />
 						<h1>PUNKROCK FROM THE HEART</h1>
 					</a>
 				</header>
-				<!-- /header -->
-
 			</div>
 		</div>
 
