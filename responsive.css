@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 17px;
+    }
+    .header {
+        margin: 30px auto;
+    }
+
+    .header h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-image {
+        height: 525px;
+    }
+
+    .content-container {
+        margin-top: -150px;
+    }
+    .content-container section {
+        padding: 0 30px 45px 30px;
+    }
+    .content-container section.links .column {
+        padding-bottom: 45px;
+    }
+
+    h2.page-title {
+        margin: 0 -30px 15px -30px;
+        font-size: 3rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .videos {
+        padding-top: 45px;
+    }
+    .videos .column {
+        padding-bottom: 45px;
+    }
+
+    .easy-opt-in-widget  #fca_eoi_form_177 .fca_eoi_layout_1.fca_eoi_layout_widget div.fca_eoi_layout_headline_copy_wrapper div {
+        font-size: 4rem !important;
+    }
+
+    /* FUCK idiotic plugin styles ... reset the reset of tiny mobile bullshit */
+    .easy-opt-in-widget form.fca_eoi_layout_1.fca_eoi_layout_widget div.fca_eoi_layout_content_wrapper div.fca_eoi_form_text_element.fca_eoi_layout_description_copy_wrapper div {
+        font-size: initial !important;
+    }
+    .easy-opt-in-widget form.fca_eoi_layout_1.fca_eoi_layout_widget div.fca_eoi_layout_content_wrapper div.fca_eoi_layout_field_wrapper div.fca_eoi_layout_field_inner input {
+        font-size: 1rem !important;
+        padding: 0.5rem 0;
+    }
+    .easy-opt-in-widget form.fca_eoi_layout_1.fca_eoi_layout_widget div.fca_eoi_layout_content_wrapper div.fca_eoi_layout_submit_button_wrapper input {
+        font-weight: 400;
+        font-size: 1rem !important;
+        padding: 0.6rem 0;
+    }
+
+    .lightwidget--grid.lightwidget--grid-6 li {
+        flex-basis: 16.65%;
+        width: 16.65%;
+    }
+
+    /* LOCAL HACKS */
+    .metaslider {
+        height: 450px !important;
+        overflow: hidden !important;
+    }
+}

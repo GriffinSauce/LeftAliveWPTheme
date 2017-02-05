@@ -121,8 +121,11 @@ function html5blank_styles()
 	wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
 	wp_enqueue_style('html5blank'); // Enqueue it!
 
-	wp_register_style('grid', get_template_directory_uri() . '/grid.css', array(), '1.0', 'all');
+	wp_register_style('grid', get_template_directory_uri() . '/grid12.css', array(), '1.0', 'all');
 	wp_enqueue_style('grid'); // Enqueue it!
+
+	wp_register_style('responsive', get_template_directory_uri() . '/responsive.css', array(), '1.0', 'all');
+	wp_enqueue_style('responsive'); // Enqueue it!
 }
 
 // Register HTML5 Blank Navigation
@@ -188,8 +191,8 @@ if (function_exists('register_sidebar'))
 
 	// Define Sidebar Widget Area 2
 	register_sidebar(array(
-		'name' => __('Widget 2: Media', 'html5blank'),
-		'description' => __('Add soundcloud, youtube etc here.', 'html5blank'),
+		'name' => __('Widget 2: Newsletter form', 'html5blank'),
+		'description' => __('From will be overlaid on picture.', 'html5blank'),
 		'id' => 'widget-area-2',
 		'before_widget' => '<div id="%1$s" class="%2$s">',
 		'after_widget' => '</div>',
@@ -213,6 +216,28 @@ if (function_exists('register_sidebar'))
 		'name' => __('Widget 4: Gallery', 'html5blank'),
 		'description' => __('Add a photo gallery widget or shortcode here.', 'html5blank'),
 		'id' => 'widget-area-4',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
+
+	// Define Sidebar Widget Area 5
+	register_sidebar(array(
+		'name' => __('Widget 5: Video signup', 'html5blank'),
+		'description' => __('Add the video signupform here.', 'html5blank'),
+		'id' => 'widget-area-5',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
+
+	// Define Sidebar Widget Area 6
+	register_sidebar(array(
+		'name' => __('Widget 6: Instagram feed', 'html5blank'),
+		'description' => __('', 'html5blank'),
+		'id' => 'widget-area-6',
 		'before_widget' => '<div id="%1$s" class="%2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
@@ -289,6 +314,16 @@ function remove_admin_bar()
 function html5_style_remove($tag)
 {
 	return preg_replace('~\s+type=["\'][^"\']++["\']~', '', $tag);
+}
+
+// Block bootstrap from stylesheets
+function block_bootstrap($tag)
+{
+	if(preg_match("/bootstrap/",$tag)) {
+		return "";
+	} else {
+		return $tag;
+	}
 }
 
 // Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
@@ -402,6 +437,7 @@ add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed i
 add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
 add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
+add_filter('style_loader_tag', 'block_bootstrap'); // Remove any bootstrap imports from idiotic plugins
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
 
