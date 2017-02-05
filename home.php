@@ -34,13 +34,13 @@ Template Name: Homepage
 	                        </a>
 	                        <div class="row releases">
 								<div class="col-xs-6">
-									<a href="" target="_blank">
-		                            	<img src="http://placehold.it/500x500">
+									<a href="https://open.spotify.com/album/56uLvj0p9a24aUwFvPUBrQ" target="_blank">
+		                            	<img src="<?php echo get_template_directory_uri(); ?>/img/empty-ep.jpg">
 		                            </a>
 		                        </div>
 								<div class="col-xs-6">
-									<a href="" target="_blank">
-		                            	<img src="http://placehold.it/500x500">
+									<a href="#" target="_blank">
+		                            	<img src="<?php echo get_template_directory_uri(); ?>/img/leaveit-comingsoon.jpg">
 		                            </a>
 		                        </div>
 		                    </div>
@@ -97,7 +97,7 @@ Template Name: Homepage
 					<!-- LightWidget WIDGET -->
 					<script src="//lightwidget.com/widgets/lightwidget.js"></script>
 					<iframe src="//lightwidget.com/widgets/ae07819c0793503091da7e9e9da2a715.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-					<p>Follow us on instagram: <a href="https://www.instagram.com/leftaliveband/" target="_blank">@leftaliveband</p>
+					<p>Follow us on instagram: <a href="https://www.instagram.com/leftaliveband/" target="_blank">@leftaliveband</a></p>
 				</div>
 			</div>
 

@@ -1,45 +1,42 @@
 <?php get_header(); ?>
 
-	<div class="container_10 clearfix">
+<div class="hero-image"></div>
 
-		<main role="main" class="grid_7">
-			<!-- section -->
-			<section>
+<div class="container content-container">
 
-				<h1><?php the_title(); ?></h1>
+		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-				<!-- article -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="row">
 
-					<?php the_content(); ?>
+			<article id="post-<?php the_ID(); ?>" class="col-xs-12 col-sm-10 col-sm-push-1">
+				<section>
+					<h1 class="page-title"><?php the_title(); ?></h1>
+					<?php the_content(); // Dynamic Content ?>
+				</section>
 
-				</article>
-				<!-- /article -->
+				<!-- gigs -->
+				<section>
+					<?php dynamic_sidebar( 'widget-area-1' ); ?>
+				</section>
+			</article>
 
-			<?php endwhile; ?>
+		</div>
 
-			<?php else: ?>
+		<?php endwhile; ?>
 
-				<!-- article -->
-				<article>
+		<?php else: ?>
 
-					<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+			<!-- article -->
+			<article>
 
-				</article>
-				<!-- /article -->
+				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-			<?php endif; ?>
+			</article>
+			<!-- /article -->
 
-			</section>
-			<!-- /section -->
-		</main>
+		<?php endif; ?>
 
-		<aside class="grid_3">
-			<?php dynamic_sidebar( 'widget-area-1' ); ?>
-			<?php dynamic_sidebar( 'widget-area-2' ); ?>
-		</aside>
 
 	</div>
 

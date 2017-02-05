@@ -7,6 +7,7 @@
  * Override this template in your own theme by creating a file at [your-theme]/tribe-events/single-event.php
  *
  * @package TribeEventsCalendar
+ * @version  4.3
  *
  */
 
@@ -21,21 +22,20 @@ $event_id = get_the_ID();
 
 ?>
 
+<h1 class="page-title"><?php the_title(); ?></h1>
+
 <div id="tribe-events-content" class="tribe-events-single">
 
 	<p class="tribe-events-back">
-		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php printf( '&laquo; ' . esc_html__( 'All %s', 'the-events-calendar' ), $events_label_plural ); ?></a>
+		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php printf( '&laquo; ' . esc_html_x( 'All %s', '%s Events plural label', 'the-events-calendar' ), $events_label_plural ); ?></a>
 	</p>
 
 	<!-- Notices -->
 	<?php tribe_the_notices() ?>
 
-	<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
-
 	<div class="tribe-events-schedule tribe-clearfix">
 		<?php echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); ?>
 		<?php if ( tribe_get_cost() ) : ?>
-			<span class="tribe-events-divider">|</span>
 			<span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
 		<?php endif; ?>
 	</div>
@@ -69,9 +69,6 @@ $event_id = get_the_ID();
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
 			<?php tribe_get_template_part( 'modules/meta' ); ?>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
-			
-			<!-- <?php tribe_get_start_date(); ?>-->
-			<!-- test -->
 		</div> <!-- #post-x -->
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>

@@ -24,6 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
+
 $events_label_plural = tribe_get_event_label_plural();
 
 $posts = tribe_get_list_widget_events();
@@ -37,18 +38,31 @@ if ( $posts ) : ?>
 		foreach ( $posts as $post ) :
 			setup_postdata( $post );
 			?>
-			<li class="tribe-events-list-widget-events <?php tribe_events_event_classes() ?>">
+			<li class="custom-list-widget-events">
 
-				<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" rel="bookmark">
+				<?php
+					$link = tribe_get_event_website_url( $event );
+					if (empty($link) ) {
+						$link = esc_url( tribe_get_event_link() );
+					}
+					$cost = tribe_get_cost( null, true );
+					if (empty($cost) ) {
+						$cost = "FREE";
+					}
+				?>
 
-					<?php echo tribe_events_event_start_date(); ?>
-
-					<!-- Event details -->
-					<div class="description">
-						<h4 class="entry-title summary"><?php the_title(); ?></h4>
-						<div><?php echo tribe_get_city( $event );?></div>
+				<a href="<?php echo $link ?>" rel="bookmark" target="_blank">
+					<div class="date-time">
+						<div class="date"><?php echo tribe_get_start_date( $event, false, "j F" ); ?></div>
 						<div class="time"><?php echo tribe_events_event_start_time(); ?></div>
-						<div class="more">More</div>
+					</div>
+					<div class="location">
+						<h4 class="title"><?php the_title(); ?></h4>
+						<div><?php echo tribe_get_city( $event );?></div>
+					</div>
+					<div class="cta">
+						<div class="cost"><?php echo $cost; ?></div>
+						<div class="going">I'm going!</div>
 					</div>
 				</a>
 
@@ -59,7 +73,7 @@ if ( $posts ) : ?>
 	</ol><!-- .hfeed -->
 
 	<p class="tribe-events-widget-link">
-		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" rel="bookmark"><?php printf( __( 'View All %s', 'tribe-events-calendar' ), $events_label_plural ); ?></a>
+		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" rel="bookmark"><?php printf('View All Shows'); ?></a>
 	</p>
 
 <?php
