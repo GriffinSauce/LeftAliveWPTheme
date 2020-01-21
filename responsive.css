@@ -1,8 +1,15 @@
-/*------------------------------------*\
-    RESPONSIVE
-\*------------------------------------*/
+// /*------------------------------------*\
+//     RESPONSIVE
+// \*------------------------------------*/
 
 
+@media only screen and (min-width: 375px) {
+    .button {
+        padding: 20px 0 20px 18px;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+}
 @media only screen and (min-width: 768px) {
     html {
         font-size: 17px;
@@ -29,11 +36,16 @@
     .content-container {
         margin-top: -150px;
     }
+
     .content-container section {
-        padding: 0 30px 45px 30px;
+        margin-bottom: 45px;
     }
-    .content-container section.links .column {
-        padding-bottom: 45px;
+    .content-container section.with-columns .column {
+        margin-bottom: 45px;
+    }
+
+    .content-container section.white-box {
+        padding: 0 30px 30px 30px;
     }
 
     .page-title {
@@ -41,34 +53,19 @@
         font-size: 3rem;
     }
 
-    .button {
+    .button-attachment {
         font-size: 1rem;
-        line-height: 1rem;
     }
 
-    .videos {
-        padding-top: 45px;
-    }
-    .videos .column {
-        padding-bottom: 45px;
+    .video-responsive + .video-responsive {
+        margin-top: 30px;
     }
 
-    .easy-opt-in-widget  #fca_eoi_form_177 .fca_eoi_layout_1.fca_eoi_layout_widget div.fca_eoi_layout_headline_copy_wrapper div {
-        font-size: 4rem !important;
+    .newsletter {
+        padding: 45px 0;
     }
-
-    /* FUCK idiotic plugin styles ... reset the reset of tiny mobile bullshit */
-    .easy-opt-in-widget form.fca_eoi_layout_1.fca_eoi_layout_widget div.fca_eoi_layout_content_wrapper div.fca_eoi_form_text_element.fca_eoi_layout_description_copy_wrapper div {
-        font-size: initial !important;
-    }
-    .easy-opt-in-widget form.fca_eoi_layout_1.fca_eoi_layout_widget div.fca_eoi_layout_content_wrapper div.fca_eoi_layout_field_wrapper div.fca_eoi_layout_field_inner input {
-        font-size: 1rem !important;
-        padding: 0.5rem 0;
-    }
-    .easy-opt-in-widget form.fca_eoi_layout_1.fca_eoi_layout_widget div.fca_eoi_layout_content_wrapper div.fca_eoi_layout_submit_button_wrapper input {
-        font-weight: 400;
-        font-size: 1rem !important;
-        padding: 0.6rem 0;
+    .newsletter h3 {
+        font-size: 4rem;
     }
 
     .lightwidget--grid.lightwidget--grid-6 li {
@@ -76,9 +73,20 @@
         width: 16.65%;
     }
 
-    /* LOCAL HACKS */
-    .metaslider {
-        height: 450px !important;
-        overflow: hidden !important;
+    .tribe-events-list-widget .title {
+        font-size: 1.1rem;
+        padding: 0.6rem;
+    }
+    .tribe-events-list-widget .details {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .hero-image {
+        height: 750px;
+    }
+    .content-container {
+        margin-top: -250px;
     }
 }

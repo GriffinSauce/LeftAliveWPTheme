@@ -11,8 +11,12 @@
         <div class="row">
 
             <article id="post-<?php the_ID(); ?>" class="col-xs-12 col-sm-10 col-sm-push-1">
-                <section>
-                    <?php the_content(); // Dynamic Content ?>
+                <section class="white-box">
+
+                    <!-- main content -->
+                    <div class="main">
+                        <?php the_content(); // Dynamic Content ?>
+                    </div>
                 </section>
             </article>
 

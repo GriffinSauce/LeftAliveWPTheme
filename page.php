@@ -10,15 +10,20 @@
 		<div class="row">
 
 			<article id="post-<?php the_ID(); ?>" class="col-xs-12 col-sm-10 col-sm-push-1">
-				<section>
-					<h1 class="page-title"><?php the_title(); ?></h1>
-					<?php the_content(); // Dynamic Content ?>
+				<section class="white-box">
+
+					<!-- main content -->
+					<div class="main">
+						<h1 class="page-title"><?php the_title(); ?></h1>
+						<?php the_content(); // Dynamic Content ?>
+					</div>
+
+					<!-- gigs -->
+					<div>
+						<?php dynamic_sidebar( 'widget-area-1' ); ?>
+					</div>
 				</section>
 
-				<!-- gigs -->
-				<section>
-					<?php dynamic_sidebar( 'widget-area-1' ); ?>
-				</section>
 			</article>
 
 		</div>

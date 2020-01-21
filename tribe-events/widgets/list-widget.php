@@ -52,18 +52,17 @@ if ( $posts ) : ?>
 				?>
 
 				<a href="<?php echo $link ?>" rel="bookmark" target="_blank">
-					<div class="date-time">
-						<div class="date"><?php echo tribe_get_start_date( $event, false, "j F" ); ?></div>
-						<div class="time"><?php echo tribe_events_event_start_time(); ?></div>
-					</div>
-					<div class="location">
-						<h4 class="title"><?php the_title(); ?></h4>
-						<div><?php echo tribe_get_city( $event );?></div>
-					</div>
-					<div class="cta">
+					<h4 class="title"><?php the_title(); ?></h4>
+					<div class="details">
+						<div class="location-date">
+							<div class="date-time">
+								<span class="date"><?php echo tribe_get_start_date( $event, false, "j F" ); ?></span> - <span class="time"><?php echo tribe_events_event_start_time(); ?></span>
+							</div>
+							<div class="location"><?php echo tribe_get_city( $event );?></div>
+						</div>
 						<div class="cost"><?php echo $cost; ?></div>
-						<div class="going">I'm going!</div>
 					</div>
+					<!-- <div class="going">Save the event!</div> -->
 				</a>
 
 			</li>
@@ -80,7 +79,6 @@ if ( $posts ) : ?>
 // No events were found.
 else : ?>
 	<p>No shows planned, book us!</p>
-	<p>Phone: <a href="tel:0031630336052">06-30336052</a></p>
 	<p>Email: <a href="mailto:mail@leftalive.nl">mail@leftalive.nl</a></p>
 <?php
 endif;

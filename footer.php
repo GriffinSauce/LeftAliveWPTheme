@@ -1,11 +1,11 @@
-		<div class="container_10 clearfix">
+		<div>
 
 			<!-- footer -->
-			<footer class="footer grid_10" role="contentinfo">
+			<footer class="footer" role="contentinfo">
 
 				<!-- copyright -->
 				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.
+					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.<br>
 					Built by <a href="https://github.com/GriffinSauce/" title="GriffinSauce">GriffinSauce</a>.
 				</p>
 				<!-- /copyright -->

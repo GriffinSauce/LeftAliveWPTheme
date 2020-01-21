@@ -121,13 +121,13 @@ function html5blank_styles()
 	wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
 	wp_enqueue_style('normalize'); // Enqueue it!
 
-	wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+	wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '2.0', 'all');
 	wp_enqueue_style('html5blank'); // Enqueue it!
 
 	wp_register_style('grid', get_template_directory_uri() . '/grid12.css', array(), '1.0', 'all');
 	wp_enqueue_style('grid'); // Enqueue it!
 
-	wp_register_style('responsive', get_template_directory_uri() . '/responsive.css', array(), '1.0', 'all');
+	wp_register_style('responsive', get_template_directory_uri() . '/responsive.css', array(), '2.0', 'all');
 	wp_enqueue_style('responsive'); // Enqueue it!
 }
 
@@ -329,6 +329,17 @@ function block_bootstrap($tag)
 	}
 }
 
+// Rewrite plugin scripts
+function rewrite_plugin_scripts($tag)
+{
+	if(preg_match("/targeting.min.js/",$tag)) {
+		$script = get_template_directory_uri() . '/mailchimp-wp/targeting.min.js';
+		return "<script type='text/javascript' src='" . $script . "'></script>";
+	} else {
+		return $tag;
+	}
+}
+
 // Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
 function remove_thumbnail_dimensions( $html )
 {
@@ -443,6 +454,8 @@ add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from 
 add_filter('style_loader_tag', 'block_bootstrap'); // Remove any bootstrap imports from idiotic plugins
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
+
+add_filter('script_loader_tag', 'rewrite_plugin_scripts'); // Rewrite any plugin scripts that break because of dumb coding
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
